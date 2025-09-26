@@ -1,3 +1,8 @@
-# Design Workspace Canvas Rendered
+### Polotno + React 19 Bug
 
-This react app is the back-end renderer for Design Workspace
+## Installation + reproduction steps:
+- Run `pnpm i` to install
+- Run `pnpm dev` to start the vide application
+- Open the app on your browser, try resizing/dragging the element
+
+Note: you have access to the store on the global window object.
