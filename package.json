@@ -1,0 +1,60 @@
+{
+  "name": "@constech/canvas-renderer",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:zip": "pnpm build && cd dist && zip -r ../canvas-renderer.zip .",
+    "preview": "vite preview",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest --watch",
+    "biomelint": "biome lint",
+    "biomelint:fix": "biome check --write"
+  },
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "author": "Constellation",
+  "license": "ISC",
+  "dependencies": {
+    "@mui/icons-material": "^7.1.0",
+    "@mui/material": "^7.1.0",
+    "polotno": "2.28.3",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "konva": "^9.3.22",
+    "mobx-react-lite": "^4.0.5",
+    "react-konva": "^19.0.10",
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "@vitejs/plugin-react": "4.5.2",
+    "vite": "7.1.7",
+    "vite-plugin-singlefile": "^2.3.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "19.1.1",
+      "react-dom": "19.1.1",
+      "@types/react": "19.1.12",
+      "@types/react-dom": "19.1.9",
+      "@rjsf/core": "^6.0.0-beta.15",
+      "@rjsf/utils": "^6.0.0-beta.15",
+      "polotno>react": "19.1.1",
+      "polotno>react-dom": "19.1.1",
+      "polotno>react-konva": "19.0.10",
+      "@blueprintjs/core>react": "19.1.1",
+      "@blueprintjs/core>react-dom": "19.1.1",
+      "@blueprintjs/select>react": "19.1.1",
+      "@blueprintjs/select>react-dom": "19.1.1",
+      "@blueprintjs/icons>react": "19.1.1",
+      "@blueprintjs/icons>react-dom": "19.1.1"
+    }
+  }
+}
